@@ -5,11 +5,12 @@ h1 {
 .paragraph-1{
     font-style: italic ;
     font-size: large;
-    color: aqua;
+    color: rgb(0, 81, 255);
+    text-shadow: rgb(0, 255, 34) 2px 5px;
 }
 
 .paragraph-2 {
-    border: 10px solid blue;
+    border: 10px solid rgb(255, 0, 234);
     font-size: 24pt;
     border-radius: 20px;
     margin-bottom: 60px;
@@ -19,4 +20,10 @@ h1 {
 .paragraph-3 {
     font-weight: bold;
     font-family: Courier New;
+}
+
+.paragraph-4 {
+    font-style: italic;
+    text-align: center;
+    font-size: 24pt;
 }
