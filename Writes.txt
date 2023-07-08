@@ -1,0 +1,20 @@
+Занятие 4 - Фреймворк Django
+Конспект 
+1) Архитектура джанго стрноится по методу MTV:
+M - Model - Работа с БД
+T - Template(шаблон) - HTML Страница
+V - view 
+User <-> View(Request/Response) <-> Template(HTML/CSS/Form)
+            |
+            V
+         Model -> BD
+1)URLS.PY проекта
+2)URLS.py приложения
+3)Views.py выполняется соотв. функция
+ -> HTML страницу
+
+1)Создаём приложение
+2)URL приложения
+3)views.py 
+4)Подключаем URL проекта
+5)Добавить в settings приложение 
