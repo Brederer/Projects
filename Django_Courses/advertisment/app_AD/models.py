@@ -9,3 +9,8 @@ class AD(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     upated_at = models.DateTimeField(auto_now=True)
     
+    def __str__(self):
+        return f"AD(id={self.id}, title={self.title}, price={self.price})"
+    
+    class Meta:
+        db_table = "advertisements"    
