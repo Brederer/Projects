@@ -1,9 +1,11 @@
 from django.shortcuts import render
-# from django.http import HttpResponse
+from .models import AD
 
 
 def index(request):
-    return render(request, 'index.html')
+    ads = AD.objects.all()
+    context = {'ads':ads}
+    return render(request, 'index.html', context)
 
 
 def top_sellers(request):
