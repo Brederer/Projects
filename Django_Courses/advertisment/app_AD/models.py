@@ -22,12 +22,12 @@ class AD(models.Model):
         return self.created_at.strftime('%d.%m.%Y в %H:%M:%S')
     
     
-    @admin.display(description='Дата обновления')
+    @admin.display(description='Дата последнего обновления')
     def updated_date(self):
         if self.updated_at.date() == timezone.now().date():
-            updated_time = self.updated_at.time().strftime('%H:%M:%S')
+            creted_time = self.updated_at.time().strftime('%H:%M:%S')
             return format_html(
-                '<span style="font-weight: italic; color:blue;">Сегодня в {} </span>', updated_time
+                '<span style="font-weight: italic; color:blue;">Сегодня в {} </span>', created_time
             )
         return self.updated_at.strftime('%d.%m.%Y в %H:%M:%S')
     
