@@ -1,14 +1,18 @@
 from django.shortcuts import render, redirect
 from .models import AD
 from .forms import ADForm
-from django.urls import reverse
 from django.urls import reverse, reverse_lazy
 from django.contrib.auth.decorators import login_required
 
 
 def index(request):
-    ads = AD.objects.all()
-    context = {'ads':ads}
+    title = request.GET.get('query')
+    if title:
+        ads = AD.objects.filter(title=title)
+    else: 
+        ads = AD.objects.all()
+    # ads = AD.objects.all()
+    context = {'advertisements':ads}
     return render(request, 'app_AD/index.html', context)
 
 
